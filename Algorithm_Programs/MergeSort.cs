@@ -1,16 +1,13 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Algorithm_Programs
 {
     public class MergeSort
     {
         private string filePath = @"C:\Users\Mahesh\OneDrive\Desktop\Assignments\RFP .Net Assignment\Algorithm_Programs\Algorithm_Programs\JSON\BinarySearchData.json";
-        string[] wordsArray;
         public void ArrayData()
         {
             string words = File.ReadAllText(filePath);
