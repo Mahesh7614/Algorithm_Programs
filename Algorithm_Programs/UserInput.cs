@@ -22,6 +22,13 @@ namespace Algorithm_Programs
                     Console.WriteLine("Using Iterative Method Permutations are :: ");
                     Permutations.IterationPermutation(str); // using iterative Menthod
                     break;
+
+                case 2:
+                    Console.Write("\nEnter the Car Name which you want to search Using Binary Search : ");
+                    string cars = Console.ReadLine();
+                    BinarySearch search = new BinarySearch();
+                    search.BinarySearchWordCheck(cars);
+                    break;
             }
         }
     }
