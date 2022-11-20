@@ -11,6 +11,7 @@ namespace Algorithm_Programs
             Console.WriteLine("Choose - 3. Insertion Sort ");
             Console.WriteLine("Choose - 4. Bubble Sort ");
             Console.WriteLine("Choose - 5. Merge Sort ");
+            Console.WriteLine("Choose - 6. Check Anagram ");
 
             Console.Write("\nEnter Selected Number : ");
             int userInput = int.Parse(Console.ReadLine());
@@ -46,6 +47,15 @@ namespace Algorithm_Programs
                 case 5:
                     MergeSort merge = new MergeSort();
                     merge.ArrayData();
+                    break;
+
+                case 6:
+                    Console.Write("Enter 1st Word : ");
+                    string str1 = Console.ReadLine();
+                    Console.Write("Enter 2nd Word : ");
+                    string str2 = Console.ReadLine();
+                    Anagram anagram = new Anagram();
+                    anagram.CheckAnagram(str1,str2);
                     break;
             }
         }
