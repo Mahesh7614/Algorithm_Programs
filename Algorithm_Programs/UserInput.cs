@@ -7,14 +7,16 @@ namespace Algorithm_Programs
         public void UserInputForPrograms()
         {
             Console.WriteLine("Enter - 1. Permutation ");
+            Console.WriteLine("Enter - 2. Binary Search ");
 
-            Console.Write("Enter Selected Number : ");
+
+            Console.Write("\nEnter Selected Number : ");
             int userInput = int.Parse(Console.ReadLine());
 
             switch (userInput)
             {
                 case 1:
-                    Console.WriteLine("\nEnter String for Permutation");
+                    Console.Write("\nEnter String for Permutation : ");
                     string str = Console.ReadLine();
                     int Length = str.Length;
                     Permutations permutations = new Permutations();
@@ -22,6 +24,13 @@ namespace Algorithm_Programs
                     permutations.Recursionpermutation(str, 0, Length - 1); // using Recursion Menthod
                     Console.WriteLine("Using Iterative Method Permutations are :: ");
                     permutations.IterationPermutation(str); // using iterative Menthod
+                    break;
+
+                case 2:
+                    Console.Write("\nEnter the Car Name which you want to search Using Binary Search : ");
+                    string cars = Console.ReadLine();
+                    BinarySearch search = new BinarySearch();
+                    search.BinarySearchWordCheck(cars);
                     break;
             }
         }
