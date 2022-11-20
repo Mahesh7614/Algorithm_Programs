@@ -14,34 +14,33 @@ namespace Algorithm_Programs
 
             string[] wordsArray = word.Split(',');
 
-            Console.WriteLine("Unsorted Array :: ");
+            Console.WriteLine("***************************** Unsorted Array *****************************");
             foreach (string car in wordsArray)
             {
                 Console.WriteLine(car);
             }
             SortUsinhgInsertionSort(wordsArray);
         }
-        public void SortUsinhgInsertionSort(string[] wordsArray)
+        public void SortUsinhgInsertionSort(IComparable[] wordsArray)
         {
 
-            for (int i = 1; i < wordsArray.Length; ++i)
+            for (int i = 1; i < wordsArray.Length; i++)
             {
-                string key = wordsArray[i];
+                IComparable key = wordsArray[i];
                 int j = i - 1;
 
-                while (j >= 0 && wordsArray[j].CompareTo(key) < 0)
+                while ((j >= 0) && (wordsArray[j].CompareTo(key) > 0))
                 {
                     wordsArray[j + 1] = wordsArray[j];
-                    j = j - 1;
+                    j--;
                 }
-                wordsArray[j + 1] = key;
-                Console.WriteLine("Sorted Array Using Insertion Sort ::");
+                wordsArray[j + 1] = key;                
             }
+            Console.WriteLine("\n***************************** Sorted Array Using Insertion Sort *****************************");
             foreach (string car in wordsArray)
             {
                 Console.WriteLine(car);
             }
-            SortUsinhgInsertionSort(wordsArray);
         }
     }
 }
