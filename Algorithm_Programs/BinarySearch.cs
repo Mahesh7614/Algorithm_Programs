@@ -11,13 +11,13 @@ namespace Algorithm_Programs
         public void BinarySearchWordCheck(string str)
         {
             string words = File.ReadAllText(filePath);
-            string word = JsonConvert.SerializeObject(words);
+            string word = JsonConvert.DeserializeObject<string>(words);
 
-            List<string> list = word.Split(',').ToList<string>();
-            list.Sort();
-            int pos = list.BinarySearch(str);
+            string[] wordsArray = word.Split(',');
+            Array.Sort(wordsArray);
+            int pos = Array.BinarySearch(wordsArray,str);
 
-            if (pos >= 0)
+            if (pos+1 >= 0)
             {
                 Console.WriteLine($"{str} found at position " + pos + "\n");
             }
