@@ -8,11 +8,12 @@ namespace Algorithm_Programs
         {
             Console.WriteLine("Enter - 1. Permutation ");
             Console.WriteLine("Enter - 2. Binary Search ");
-            Console.WriteLine("Choose - 3. Insertion Sort ");
-            Console.WriteLine("Choose - 4. Bubble Sort ");
-            Console.WriteLine("Choose - 5. Merge Sort ");
-            Console.WriteLine("Choose - 6. Check Anagram ");
-            Console.WriteLine("Choose - 7. Prime Number within Range ");
+            Console.WriteLine("Enter - 3. Insertion Sort ");
+            Console.WriteLine("Enter - 4. Bubble Sort ");
+            Console.WriteLine("Enter - 5. Merge Sort ");
+            Console.WriteLine("Enter - 6. Check Anagram ");
+            Console.WriteLine("Enter - 7. Prime Number within Range ");
+            Console.WriteLine("Enter - 8. Prime Number within Range its Anagram and Palindrome ");
 
             Console.Write("\nEnter Selected Number : ");
             int userInput = int.Parse(Console.ReadLine());
@@ -67,6 +68,16 @@ namespace Algorithm_Programs
                     Console.Write("The prime numbers between {0} and {1} are : \n", start, End);
                     PrimeNumber prime = new PrimeNumber();
                     prime.CheckPrimeNumber(start, End);
+                    break;
+
+                case 8:
+                    Console.Write("Starting number of range: ");
+                    int startNo = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("Ending number of range : ");
+                    int endNo = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("The prime numbers between {0} and {1} are : \n", startNo, endNo);
+                    PrimeNumberCheckAnagramAndPalindrome primeobj = new PrimeNumberCheckAnagramAndPalindrome();
+                    primeobj.CheckPrimeNumber(startNo, endNo);
                     break;
             }
         }
