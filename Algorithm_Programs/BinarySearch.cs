@@ -6,7 +6,7 @@ namespace Algorithm_Programs
 {
     public class BinarySearch
     {
-        public string filePath = @"C:\Users\Mahesh\OneDrive\Desktop\Assignments\RFP .Net Assignment\Algorithm_Programs\Algorithm_Programs\JSON\BinarySearchData.json";
+        private string filePath = @"C:\Users\Mahesh\OneDrive\Desktop\Assignments\RFP .Net Assignment\Algorithm_Programs\Algorithm_Programs\JSON\BinarySearchData.json";
 
         public void BinarySearchWordCheck(string str)
         {

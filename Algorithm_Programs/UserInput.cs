@@ -10,6 +10,7 @@ namespace Algorithm_Programs
             Console.WriteLine("Enter - 2. Binary Search ");
             Console.WriteLine("Choose - 3. Insertion Sort ");
             Console.WriteLine("Choose - 4. Bubble Sort ");
+            Console.WriteLine("Choose - 5. Merge Sort ");
 
             Console.Write("\nEnter Selected Number : ");
             int userInput = int.Parse(Console.ReadLine());
@@ -19,9 +20,8 @@ namespace Algorithm_Programs
                 case 1:
                     Console.Write("\nEnter String for Permutation : ");
                     string str = Console.ReadLine();
-                    int Length = str.Length;
                     Console.WriteLine("Using Recursion Method Permutations are :: ");
-                    Permutations.RecursionPermutation(str, 0, Length - 1); // using Recursion Menthod
+                    Permutations.RecursionPermutation(str, 0, str.Length - 1); // using Recursion Menthod
                     Console.WriteLine("Using Iterative Method Permutations are :: ");
                     Permutations.IterationPermutation(str); // using iterative Menthod
                     break;
@@ -41,6 +41,11 @@ namespace Algorithm_Programs
                 case 4:
                     BubbleSort bubble = new BubbleSort();
                     bubble.ArrayData();
+                    break;
+
+                case 5:
+                    MergeSort merge = new MergeSort();
+                    merge.ArrayData();
                     break;
             }
         }

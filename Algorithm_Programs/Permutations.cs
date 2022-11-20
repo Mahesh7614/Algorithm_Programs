@@ -22,7 +22,7 @@ namespace Algorithm_Programs
                 }
             }
         }
-        public static string Swap(string str, int position1, int position2)
+        private static string Swap(string str, int position1, int position2)
         {
             char temp;
 
@@ -57,7 +57,7 @@ namespace Algorithm_Programs
                 Console.WriteLine();
             }
         }
-        public static int Factorial(int number)
+        private static int Factorial(int number)
         {
             int val = 1;
             for (int i = 2; i <= number; i++)

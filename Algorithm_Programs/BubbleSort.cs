@@ -5,7 +5,7 @@ namespace Algorithm_Programs
 {
     public class BubbleSort
     {
-        public string filePath = @"C:\Users\Mahesh\OneDrive\Desktop\Assignments\RFP .Net Assignment\Algorithm_Programs\Algorithm_Programs\JSON\BinarySearchData.json";
+        private string filePath = @"C:\Users\Mahesh\OneDrive\Desktop\Assignments\RFP .Net Assignment\Algorithm_Programs\Algorithm_Programs\JSON\BinarySearchData.json";
 
         public void ArrayData()
         {
@@ -15,13 +15,19 @@ namespace Algorithm_Programs
             string[] wordsArray = word.Split(',');
 
             Console.WriteLine("***************************** Unsorted Array *****************************");
+            Display(wordsArray);
+            SortUsinhgBubbleSort(wordsArray);
+            Console.WriteLine("\n***************************** Sorted Array Using Bubble Sort *****************************");
+            Display(wordsArray);
+        }
+        private void Display(string[] wordsArray)
+        {
             foreach (string car in wordsArray)
             {
                 Console.WriteLine(car);
             }
-            SortUsinhgBubbleSort(wordsArray);
         }
-        public void SortUsinhgBubbleSort(string[] wordsArray)
+        private void SortUsinhgBubbleSort(string[] wordsArray)
         {
             for (int j = 0; j < wordsArray.Length - 1; j++)
             {
@@ -34,13 +40,7 @@ namespace Algorithm_Programs
                         wordsArray[i] = temp;
                     }
                 }
-            }
-
-            Console.WriteLine("\n***************************** Sorted Array Using Bubble Sort *****************************");
-            foreach (string car in wordsArray)
-            {
-                Console.WriteLine(car);
-            }
+            }            
         }
     }
 }

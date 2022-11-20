@@ -6,7 +6,7 @@ namespace Algorithm_Programs
 {
     public class InsertionSort
     {
-        public string filePath = @"C:\Users\Mahesh\OneDrive\Desktop\Assignments\RFP .Net Assignment\Algorithm_Programs\Algorithm_Programs\JSON\BinarySearchData.json";
+        private string filePath = @"C:\Users\Mahesh\OneDrive\Desktop\Assignments\RFP .Net Assignment\Algorithm_Programs\Algorithm_Programs\JSON\BinarySearchData.json";
         public void ArrayData()
         {
             string words = File.ReadAllText(filePath);
@@ -15,13 +15,19 @@ namespace Algorithm_Programs
             string[] wordsArray = word.Split(',');
 
             Console.WriteLine("***************************** Unsorted Array *****************************");
+            Display(wordsArray);
+            SortUsinhgInsertionSort(wordsArray);
+            Console.WriteLine("\n***************************** Sorted Array Using Insertion Sort *****************************");
+            Display(wordsArray);
+        }
+        private void Display(string[] wordsArray)
+        {
             foreach (string car in wordsArray)
             {
                 Console.WriteLine(car);
             }
-            SortUsinhgInsertionSort(wordsArray);
         }
-        public void SortUsinhgInsertionSort(string[] wordsArray)
+        private void SortUsinhgInsertionSort(string[] wordsArray)
         {
 
             for (int i = 1; i < wordsArray.Length; i++)
@@ -35,11 +41,6 @@ namespace Algorithm_Programs
                     j--;
                 }
                 wordsArray[j + 1] = key;                
-            }
-            Console.WriteLine("\n***************************** Sorted Array Using Insertion Sort *****************************");
-            foreach (string car in wordsArray)
-            {
-                Console.WriteLine(car);
             }
         }
     }
