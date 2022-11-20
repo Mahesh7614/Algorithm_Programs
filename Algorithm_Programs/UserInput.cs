@@ -9,6 +9,7 @@ namespace Algorithm_Programs
             Console.WriteLine("Enter - 1. Permutation ");
             Console.WriteLine("Enter - 2. Binary Search ");
             Console.WriteLine("Choose - 3. Insertion Sort ");
+            Console.WriteLine("Choose - 4. Bubble Sort ");
 
             Console.Write("\nEnter Selected Number : ");
             int userInput = int.Parse(Console.ReadLine());
@@ -35,6 +36,11 @@ namespace Algorithm_Programs
                 case 3:
                     InsertionSort insertion = new InsertionSort();
                     insertion.ArrayData();
+                    break;
+
+                case 4:
+                    BubbleSort bubble = new BubbleSort();
+                    bubble.ArrayData();
                     break;
             }
         }

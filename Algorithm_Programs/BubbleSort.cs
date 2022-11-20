@@ -1,12 +1,12 @@
 ﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System;
 
 namespace Algorithm_Programs
 {
-    public class InsertionSort
+    public class BubbleSort
     {
         public string filePath = @"C:\Users\Mahesh\OneDrive\Desktop\Assignments\RFP .Net Assignment\Algorithm_Programs\Algorithm_Programs\JSON\BinarySearchData.json";
+
         public void ArrayData()
         {
             string words = File.ReadAllText(filePath);
@@ -19,24 +19,24 @@ namespace Algorithm_Programs
             {
                 Console.WriteLine(car);
             }
-            SortUsinhgInsertionSort(wordsArray);
+            SortUsinhgBubbleSort(wordsArray);
         }
-        public void SortUsinhgInsertionSort(string[] wordsArray)
+        public void SortUsinhgBubbleSort(string[] wordsArray)
         {
-
-            for (int i = 1; i < wordsArray.Length; i++)
+            for (int j = 0; j < wordsArray.Length - 1; j++)
             {
-                string key = wordsArray[i];
-                int j = i - 1;
-
-                while ((j >= 0) && (wordsArray[j].CompareTo(key) > 0))
+                for (int i = j + 1; i < wordsArray.Length; i++)
                 {
-                    wordsArray[j + 1] = wordsArray[j];
-                    j--;
+                    if (wordsArray[j].CompareTo(wordsArray[i]) > 0)
+                    {
+                        string temp = wordsArray[j];
+                        wordsArray[j] = wordsArray[i];
+                        wordsArray[i] = temp;
+                    }
                 }
-                wordsArray[j + 1] = key;                
             }
-            Console.WriteLine("\n***************************** Sorted Array Using Insertion Sort *****************************");
+
+            Console.WriteLine("\n***************************** Sorted Array Using Bubble Sort *****************************");
             foreach (string car in wordsArray)
             {
                 Console.WriteLine(car);
