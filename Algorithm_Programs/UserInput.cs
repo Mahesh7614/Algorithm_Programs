@@ -7,6 +7,8 @@ namespace Algorithm_Programs
         public void UserInputForPrograms()
         {
             Console.WriteLine("Enter - 1. Permutation ");
+            Console.WriteLine("Enter - 2. Binary Search ");
+            Console.WriteLine("Choose - 3. Insertion Sort ");
 
             Console.Write("\nEnter Selected Number : ");
             int userInput = int.Parse(Console.ReadLine());
@@ -28,6 +30,11 @@ namespace Algorithm_Programs
                     string cars = Console.ReadLine();
                     BinarySearch search = new BinarySearch();
                     search.BinarySearchWordCheck(cars);
+                    break;
+
+                case 3:
+                    InsertionSort insertion = new InsertionSort();
+                    insertion.ArrayData();
                     break;
             }
         }
