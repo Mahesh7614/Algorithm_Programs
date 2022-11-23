@@ -3,7 +3,7 @@ using System;
 
 namespace Algorithm_Programs
 {
-    public class BubbleSort
+    public class BubbleSort<M> where M : IComparable
     {
         private string filePath = @"C:\Users\Mahesh\OneDrive\Desktop\Assignments\RFP .Net Assignment\Algorithm_Programs\Algorithm_Programs\JSON\BinarySearchData.json";
 
@@ -20,14 +20,14 @@ namespace Algorithm_Programs
             Console.WriteLine("\n***************************** Sorted Array Using Bubble Sort *****************************");
             Display(wordsArray);
         }
-        private void Display(string[] wordsArray)
+        private void Display<M>(M[] wordsArray)
         {
-            foreach (string car in wordsArray)
+            foreach (M car in wordsArray)
             {
                 Console.WriteLine(car);
             }
         }
-        private void SortUsinhgBubbleSort(string[] wordsArray)
+        private void SortUsinhgBubbleSort<M>(M[] wordsArray) where M : IComparable
         {
             for (int j = 0; j < wordsArray.Length - 1; j++)
             {
@@ -35,7 +35,7 @@ namespace Algorithm_Programs
                 {
                     if (wordsArray[j].CompareTo(wordsArray[i]) > 0)
                     {
-                        string temp = wordsArray[j];
+                        M temp = wordsArray[j];
                         wordsArray[j] = wordsArray[i];
                         wordsArray[i] = temp;
                     }

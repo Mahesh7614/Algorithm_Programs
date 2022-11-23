@@ -4,7 +4,7 @@ using System;
 
 namespace Algorithm_Programs
 {
-    public class InsertionSort
+    public class InsertionSort<M>
     {
         private string filePath = @"C:\Users\Mahesh\OneDrive\Desktop\Assignments\RFP .Net Assignment\Algorithm_Programs\Algorithm_Programs\JSON\BinarySearchData.json";
         public void ArrayData()
@@ -20,19 +20,19 @@ namespace Algorithm_Programs
             Console.WriteLine("\n***************************** Sorted Array Using Insertion Sort *****************************");
             Display(wordsArray);
         }
-        private void Display(string[] wordsArray)
+        private void Display<M>(M[] wordsArray)
         {
-            foreach (string car in wordsArray)
+            foreach (M car in wordsArray)
             {
                 Console.WriteLine(car);
             }
         }
-        private void SortUsinhgInsertionSort(string[] wordsArray)
+        private void SortUsinhgInsertionSort<M>(M[] wordsArray) where M : IComparable
         {
 
             for (int i = 1; i < wordsArray.Length; i++)
             {
-                string key = wordsArray[i];
+                M key = wordsArray[i];
                 int j = i - 1;
 
                 while ((j >= 0) && (wordsArray[j].CompareTo(key) > 0))

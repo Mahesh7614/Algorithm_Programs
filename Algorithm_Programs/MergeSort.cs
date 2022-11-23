@@ -3,7 +3,7 @@ using System;
 
 namespace Algorithm_Programs
 {
-    public class MergeSort
+    public class MergeSort<M> where M : IComparable
     {
         private string filePath = @"C:\Users\Mahesh\OneDrive\Desktop\Assignments\RFP .Net Assignment\Algorithm_Programs\Algorithm_Programs\JSON\BinarySearchData.json";
         public void ArrayData()
@@ -14,18 +14,18 @@ namespace Algorithm_Programs
             string[] wordsArray = word.Split(',');
             Console.WriteLine("\n***************************** Unsorted Array *****************************");
             Display(wordsArray);
-            sort(wordsArray, 0, wordsArray.Length-1);
+            sort(wordsArray, 0, wordsArray.Length - 1);
             Console.WriteLine("\n***************************** Sorted Array Using Merge Sort *****************************");
             Display(wordsArray);
         }
-        private void Display(string[] wordsArray)
+        private void Display<M>(M[] wordsArray)
         {
-            foreach (string car in wordsArray)
+            foreach (M car in wordsArray)
             {
                 Console.WriteLine(car);
             }
         }
-        private void SortUsinhgMergeSort(string[] wordsArray, int initialPosition, int MiddlePosition, int length)
+        private void SortUsingMergeSort(string[] wordsArray, int initialPosition, int MiddlePosition, int length)
         {
             int n1 = MiddlePosition - initialPosition + 1;
             int n2 = length - MiddlePosition;
@@ -49,7 +49,7 @@ namespace Algorithm_Programs
             int k = initialPosition;
             while (i < n1 && j < n2)
             {
-                if (L[i].CompareTo(R[j]) <=0)
+                if (L[i].CompareTo(R[j]) <= 0) 
                 {
                     wordsArray[k] = L[i];
                     i++;
@@ -81,7 +81,7 @@ namespace Algorithm_Programs
                 int MiddlePosition = initialPosition + (length - initialPosition) / 2;
                 sort(wordsArray, initialPosition, MiddlePosition);
                 sort(wordsArray, MiddlePosition + 1, length);
-                SortUsinhgMergeSort(wordsArray, initialPosition, MiddlePosition, length);
+                SortUsingMergeSort(wordsArray, initialPosition, MiddlePosition, length);
             }
         }
     }

@@ -32,22 +32,22 @@ namespace Algorithm_Programs
                 case 2:
                     Console.Write("\nEnter the Car Name which you want to search Using Binary Search : ");
                     string cars = Console.ReadLine();
-                    BinarySearch search = new BinarySearch();
+                    BinarySearch<string> search = new BinarySearch<string>();
                     search.BinarySearchWordCheck(cars);
                     break;
 
                 case 3:
-                    InsertionSort insertion = new InsertionSort();
+                    InsertionSort<string> insertion = new InsertionSort<string>();
                     insertion.ArrayData();
                     break;
 
                 case 4:
-                    BubbleSort bubble = new BubbleSort();
+                    BubbleSort<string> bubble = new BubbleSort<string>();
                     bubble.ArrayData();
                     break;
 
                 case 5:
-                    MergeSort merge = new MergeSort();
+                    MergeSort<string> merge = new MergeSort<string>();
                     merge.ArrayData();
                     break;
 
