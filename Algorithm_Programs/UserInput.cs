@@ -14,6 +14,7 @@ namespace Algorithm_Programs
             Console.WriteLine("Enter - 6. Check Anagram ");
             Console.WriteLine("Enter - 7. Prime Number within Range ");
             Console.WriteLine("Enter - 8. Prime Number within Range its Anagram and Palindrome ");
+            Console.WriteLine("Enter - 9. Guess Number Game");
 
             Console.Write("\nEnter Selected Number : ");
             int userInput = int.Parse(Console.ReadLine());
@@ -78,6 +79,15 @@ namespace Algorithm_Programs
                     Console.Write("The prime numbers between {0} and {1} are : \n", startNo, endNo);
                     PrimeNumberCheckAnagramAndPalindrome primeobj = new PrimeNumberCheckAnagramAndPalindrome();
                     primeobj.CheckPrimeNumber(startNo, endNo);
+                    break;
+
+                case 9:
+                    Console.Write("Enter Highest value which you want guess number between 0 and that value : ");
+                    int high = Convert.ToInt32(Console.ReadLine());
+                    Console.Write($"Guess the Number between 0 and {high} : ");
+                    Console.ReadLine();
+                    FindYourNumber find = new FindYourNumber();
+                    find.FindNumber(high);
                     break;
             }
         }
