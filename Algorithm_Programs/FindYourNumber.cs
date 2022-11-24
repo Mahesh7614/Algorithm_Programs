@@ -3,7 +3,6 @@ namespace Algorithm_Programs
 {
     public class FindYourNumber
     {
-        int x;
         public void FindNumber(int high)
         {
             int low = 0,value = 0;
