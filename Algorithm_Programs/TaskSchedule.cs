@@ -14,13 +14,13 @@ namespace Algorithm_Programs
         {
             bool isCompleted = false;
             List<Task> list = new List<Task>();
-            for (int j = 1; j <= tasks; j++)
+
+            for (int k = 1; k <= tasks; k++)
             {
-                Console.WriteLine($"Enter the deadline for {j}  in Days");
+                Console.WriteLine($"Enter the deadline for {k}  in Days");
                 int days = Convert.ToInt32(Console.ReadLine());
                 list.Add(new Task() { noOfDays = days });
             }
-
             int task = 1;
             for (int i = 0; i < list.Count; i++)
             {
@@ -37,9 +37,10 @@ namespace Algorithm_Programs
                     {
                         list[i].isCompleted = true;
                         list[i].maxDays = list[i].maxDays - list[i].noOfDays;
-                        Console.WriteLine($"no of Days overshoot deadline of {task} is {list[i].maxDays} ");
+                        Console.WriteLine($"no of Days overshoot deadline of task {task} is {list[i].maxDays} ");
                         task++;
                     }
+
                 }
             }
         }
