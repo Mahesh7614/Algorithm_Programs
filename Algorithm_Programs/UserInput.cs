@@ -15,6 +15,7 @@ namespace Algorithm_Programs
             Console.WriteLine("Enter - 7. Prime Number within Range ");
             Console.WriteLine("Enter - 8. Prime Number within Range its Anagram and Palindrome ");
             Console.WriteLine("Enter - 9. Guess Number Game");
+            Console.WriteLine("Enter - 10. Task Schedule");
 
             Console.Write("\nEnter Selected Number : ");
             int userInput = int.Parse(Console.ReadLine());
@@ -84,10 +85,17 @@ namespace Algorithm_Programs
                 case 9:
                     Console.Write("Enter Highest value which you want guess number between 0 and that value : ");
                     int high = Convert.ToInt32(Console.ReadLine());
-                    Console.Write($"Guess the Number between 0 and {high} : ");
+                    Console.Write($"Guess the Number between 0 and {high-1} : ");
                     Console.ReadLine();
                     FindYourNumber find = new FindYourNumber();
                     find.FindNumber(high);
+                    break;
+
+                case 10:
+                    Console.Write("Enter the Number of Tasks : ");
+                    int tasks = Convert.ToInt32(Console.ReadLine());
+                    TaskSchedule task = new TaskSchedule();
+                    task.TaskScheduling(tasks);
                     break;
             }
         }

@@ -5,7 +5,7 @@ namespace Algorithm_Programs
     {
         public void FindNumber(int high)
         {
-            int low = 0, value = 0, count = 0;
+            int low = 0, value = 0,count = 0;
             int[] array = new int[high];
 
             for (int i = 0; i < high; i++)
@@ -27,10 +27,14 @@ namespace Algorithm_Programs
                 {
                     low = array[mid] + 1;
                 }
+                else
+                {
+                    Console.WriteLine("Invalid Option");
+                }
                 count++;
             }
             Console.Write("The Guessed Number is : " + low);
-            Console.Write("\nNumber of times Question asked to the user is : " + count);
+            Console.Write("\nNumber of times Question asked to the user is : " + count);    
         }
     }
 }
