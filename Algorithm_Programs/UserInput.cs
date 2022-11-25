@@ -16,6 +16,7 @@ namespace Algorithm_Programs
             Console.WriteLine("Enter - 8. Prime Number within Range its Anagram and Palindrome ");
             Console.WriteLine("Enter - 9. Guess Number Game");
             Console.WriteLine("Enter - 10. Task Schedule");
+            Console.WriteLine("Enter - 11. Message Demonstration");
 
             Console.Write("\nEnter Selected Number : ");
             int userInput = int.Parse(Console.ReadLine());
@@ -97,6 +98,23 @@ namespace Algorithm_Programs
                     TaskSchedule task = new TaskSchedule();
                     task.TaskScheduling(tasks);
                     break;
+
+                case 11:
+                    MessageDemonstration message = new MessageDemonstration();
+                    Console.Write("Enter First Name : ");
+                    string firstName = Console.ReadLine();
+                    Console.Write("Enter Last Name : ");
+                    string lastName = Console.ReadLine();
+                    Console.Write("Enter Mobile Number with Country Code and - between them : ");
+                    string mobileNumber = Console.ReadLine();
+                    Console.Write("Enter Date : ");
+                    string date = Console.ReadLine();
+                    Console.WriteLine($"Hello {message.FirstNameAndLastName(firstName)}, We have your full\r" +
+                        $"\nname as {message.FirstNameAndLastName(firstName)} {message.FirstNameAndLastName(lastName)} in our system. " +
+                        $"your contact number is {message.MobileNumber(mobileNumber)}.\r\nPlease,let us know in case of any clarification" +
+                        $" Thank you BridgeLabz {message.Date(date)}");
+                    break;
+
             }
         }
     }
